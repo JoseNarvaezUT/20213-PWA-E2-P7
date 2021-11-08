@@ -8,7 +8,7 @@ const camera = new Camera($('#player')[0]);
 let photoBase64 ='';
 
 
-let contextSW = '20213-PWA-U2-P7/sw.js'
+let contextSW = '20213-PWA-E2-P7/sw.js'
 let url = window.location.href;
 if(navigator.serviceWorker){
     if(url.includes('localhost')){
