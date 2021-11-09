@@ -6,18 +6,18 @@ self.addEventListener('install',(event)=>{
     const cacheStatic = caches.open(CACHE_STATIC)
         .then(cache => {
             return cache.addAll([
-                '/',
-                '/index.html',
-                '/images/user.png',
-                '/js/camera.js',
-                '/js/app.js',
-                '/manifest.json',
-                '/images/icons/android-launchericon-48-48.png',
-                '/images/icons/android-launchericon-72-72.png',
-                '/images/icons/android-launchericon-96-96.png',
-                '/images/icons/android-launchericon-144-144.png',
-                '/images/icons/android-launchericon-192-192.png',
-                '/images/icons/android-launchericon-512-512.png',
+                './',
+                './index.html',
+                './images/user.png',
+                './js/camera.js',
+                './js/app.js',
+                './manifest.json',
+                './images/icons/android-launchericon-48-48.png',
+                './images/icons/android-launchericon-72-72.png',
+                './images/icons/android-launchericon-96-96.png',
+                './images/icons/android-launchericon-144-144.png',
+                './images/icons/android-launchericon-192-192.png',
+                './images/icons/android-launchericon-512-512.png',
             ]);
         });
 
