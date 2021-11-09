@@ -8,6 +8,7 @@ class Camera {
 
     on() {
         if (navigator.mediaDevices) {
+            this.off();
             return navigator.mediaDevices.getUserMedia({
                 audio: false,
                 video: { width: 300, height: 300 }
