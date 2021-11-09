@@ -3,6 +3,7 @@ let photoUser = $('#photoUser');
 
 let btnCamera = $('#btnCamera');
 let btnTakePhoto = $('#btnTakePhoto');
+let btnCameraBack= $('#btnCameraBack');
 
 const camera = new Camera($('#player')[0]);
 let photoBase64 ='';
@@ -26,6 +27,19 @@ btnCamera.on('click',function(){
         }
     })
     .catch(err=>{
+        console.log(err);
+    });
+});
+
+btnCameraBack.on('click',function(){
+    console.log('Entro a back');
+    camera.onBack()
+    .then(resOnBack =>{
+        console.log(resOn)
+        if(!resOn){
+            alert(`Error al iniciar la cámara tras`);
+        }
+    }).catch(err=>{
         console.log(err);
     });
 });
