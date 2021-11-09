@@ -31,7 +31,7 @@ class Camera {
             this.off();
             return navigator.mediaDevices.getUserMedia({
                 audio: false,
-                video: { width: 300, height: 300, facingMode: "user" }
+                video: { width: 300, height: 300, facingMode: {exact:'environment'} }
             }).then(stream => {
                 this.videoNode.srcObject = stream;
                 this.stream = stream;
